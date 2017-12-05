@@ -48,7 +48,7 @@ $JBOSS_HOME/bin/jboss-cli.sh --connect --command="/subsystem=datasources:install
 
 # 3.1) create banco
 echo "-----> create mysql module ... "
-$JBOSS_HOME/bin/jboss-cli.sh --connect --command="data-source add --jndi-name=java:/jboss/datasources/projetox --name=ProjetoX --connection-url=jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_944000d6b44827c?reconnect=true --driver-name=mysql --user-name=bc386f5a0e4681 --password=2f701d34"
+$JBOSS_HOME/bin/jboss-cli.sh --connect --command="data-source add --jndi-name=java:/jboss/datasources/projetox --name=ProjetoX --connection-url=jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_944000d6b44827c --driver-name=mysql --user-name=bc386f5a0e4681 --password=2f701d34 --flush-strategy=IdleConnections"
 
 
 
